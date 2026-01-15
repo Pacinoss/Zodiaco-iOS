@@ -52,6 +52,7 @@
                                             <outlet property="Icon_imageView" destination="ott-9s-2Sl" id="DJ4-dV-vRd"/>
                                             <outlet property="fechas_Label" destination="Zh3-Lg-3H2" id="Eul-nr-StS"/>
                                             <outlet property="name_Label" destination="45d-gD-Jad" id="Uiq-6A-xSu"/>
+                                            <segue destination="pJX-Qq-X1V" kind="show" trigger="accessoryAction" id="Slp-eR-nHn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -73,6 +74,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DPr-cq-hCI">
+            <objects>
+                <viewController id="pJX-Qq-X1V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ykh-SV-F5G">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WuP-b4-JdJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fMJ-8o-gmg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7Y-Dq-hq5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="131"/>
         </scene>
     </scenes>
     <resources>
