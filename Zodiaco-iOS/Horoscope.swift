@@ -17,7 +17,7 @@ struct Horoscope {
         UIImage(named: "horoscope_icons/\(id)_icon")
     }
     
-    static let horoscopeList: [Horoscope] = [
+    static let horoscopeList: [Horoscope] = [//es una lista de horoscopos es un array con cochetes
         Horoscope(id: "aries", name: "Aries", dates: "21 de marzo al 19 de abril"),
         Horoscope(id: "taurus", name: "Tauro", dates: "20 de abril al 20 de mayo"),
         Horoscope(id: "gemini", name: "Geminis", dates: "21 de mayo al 20 de junio"),
