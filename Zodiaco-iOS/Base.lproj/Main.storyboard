@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A15-zj-eqj">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
+        <!--Zodiaco-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="Zodiaco_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-7m-kmS">
-                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Horoscope Cell" rowHeight="100" id="9le-9d-HFk" customClass="HoroscopeViewCell" customModule="Zodiaco_iOS" customModuleProvider="target">
@@ -52,7 +52,7 @@
                                             <outlet property="Icon_imageView" destination="ott-9s-2Sl" id="DJ4-dV-vRd"/>
                                             <outlet property="fechas_Label" destination="Zh3-Lg-3H2" id="Eul-nr-StS"/>
                                             <outlet property="name_Label" destination="45d-gD-Jad" id="Uiq-6A-xSu"/>
-                                            <segue destination="pJX-Qq-X1V" kind="show" trigger="accessoryAction" id="Slp-eR-nHn"/>
+                                            <segue destination="pJX-Qq-X1V" kind="show" identifier="" id="Znp-Lc-bRE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -67,29 +67,70 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uup-7m-kmS" secondAttribute="bottom" id="a1p-6F-puh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Zodiaco" id="F5O-HK-nnB"/>
                     <connections>
                         <outlet property="tableView" destination="Uup-7m-kmS" id="Cnn-9p-aVd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
+            <point key="canvasLocation" x="967" y="131"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="DPr-cq-hCI">
             <objects>
-                <viewController id="pJX-Qq-X1V" sceneMemberID="viewController">
+                <viewController id="pJX-Qq-X1V" customClass="DetailViewController" customModule="Zodiaco_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ykh-SV-F5G">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Psi-nC-9zg">
+                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7uI-EX-rdv">
+                                        <rect key="frame" x="117" y="8" width="159" height="152"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WuP-b4-JdJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WuP-b4-JdJ" firstAttribute="trailing" secondItem="Psi-nC-9zg" secondAttribute="trailing" id="Ees-bJ-WnA"/>
+                            <constraint firstItem="WuP-b4-JdJ" firstAttribute="bottom" secondItem="Psi-nC-9zg" secondAttribute="bottom" id="MLA-of-pIf"/>
+                            <constraint firstItem="Psi-nC-9zg" firstAttribute="leading" secondItem="WuP-b4-JdJ" secondAttribute="leading" id="NBO-g4-hm0"/>
+                            <constraint firstItem="Psi-nC-9zg" firstAttribute="top" secondItem="WuP-b4-JdJ" secondAttribute="top" id="jks-u4-Kqr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fMJ-8o-gmg"/>
+                    <connections>
+                        <outlet property="iconImagenView" destination="7uI-EX-rdv" id="gMB-vH-Rtm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7Y-Dq-hq5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="131"/>
+            <point key="canvasLocation" x="1794.6564885496182" y="130.98591549295776"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0ns-KO-G9I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A15-zj-eqj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KXS-0W-Q0h">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WTz-4Z-C33"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTq-Wi-UkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
         </scene>
     </scenes>
     <resources>

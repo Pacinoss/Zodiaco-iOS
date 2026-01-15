@@ -34,6 +34,18 @@ class ListViewController: UIViewController, UITableViewDataSource {
     }
     
     //cual es la vista para los elemntos
+    //funcion que intercepta el destino incluso en kotlin
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {//intersepta l anavegacion de un segue
+        let detailViewController = segue.destination as! DetailViewController
+        let indexPath = tableView.indexPathForSelectedRow!//saber donde dio click
+        let horoscope = horoscopeList[indexPath.row]//accedo a la lista
+        detailViewController.horoscope = horoscope//y muestro el  horoscopo
+        tableView.deselectRow(at: indexPath, animated: true)//deseleciona el boton pulsado at significa el el selecionado
+        
+        
+        
+        
+    }
 
 
 }
