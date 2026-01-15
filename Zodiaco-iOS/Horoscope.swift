@@ -16,6 +16,9 @@ struct Horoscope {
     func getIcon() -> UIImage? {
         UIImage(named: "horoscope_icons/\(id)_icon")
     }
+    func getsecondaryIcon() -> UIImage? {
+        UIImage(named: "Zodiac_icon/\(id)-icon")
+    }
     
     static let horoscopeList: [Horoscope] = [//es una lista de horoscopos es un array con cochetes
         Horoscope(id: "aries", name: "Aries", dates: "21 de marzo al 19 de abril"),

@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
         } else {
             //version
         }
-        iconImagenView.image = horoscope.getIcon()
+        iconImagenView.image = horoscope.getsecondaryIcon()
 
     }
    
