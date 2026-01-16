@@ -17,23 +17,35 @@ class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDe
     // MARK: propiedades
     var horoscopeList = Horoscope.horoscopeList
     
+    
     // MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         tableView.dataSource = self
-        
         //es el buscadore en version 26 es flotante y verwion 18 para atras esta incrustado en el interfaz
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self // sercahcoltroler seria el delegado y control de lo que se hace, self es de tipo valor Any
         navigationItem.searchController = searchController
-        
     }
+    
+    // MARK: Recargar datos Heart fill
+    //espara recargar la imagen y posiciona la imagen de favorito; el willApper nos ayuda a cargar la imagen en tiempo real
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    
+    
+    // MARK: Devuelve el numero de filas y celdas
     //cauntos numero de filas o celdas y pasa la seccion es unica
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return horoscopeList.count//devuelve el nuemro de datos que hay en la lista
     }
+    
+    
+    // MARK: TableView
     // cual es la celda para la posicion
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {//esta funcion devueleve una tableview cell
        let cell = tableView.dequeueReusableCell(withIdentifier : "Horoscope Cell", for: indexPath) as! HoroscopeViewCell//castear
@@ -43,7 +55,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDe
     }
     
 
-   
+    // MARK: SearchBar
     // el print nos muestra  en el logcat lo que el usuario pone en el buscador (recuerda searchbar es un objeto) por eso ponemos searchText para leer el texto
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
@@ -58,6 +70,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         tableView.reloadData()//recarga los datos
       
     }
+    // MARK: Cuando pulso el botonde busqueda
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("Buscar: \(searchBar.text ?? "")") //sirve papra leer lo que el usuario esxcriba lo que busca cuando le de a buscar(lupa)
   
