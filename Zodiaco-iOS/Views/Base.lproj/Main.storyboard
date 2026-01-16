@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-7m-kmS">
-                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Horoscope Cell" rowHeight="100" id="9le-9d-HFk" customClass="HoroscopeViewCell" customModule="Zodiaco_iOS" customModuleProvider="target">
@@ -67,10 +67,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Uup-7m-kmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8mI-gf-rkl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uup-7m-kmS" secondAttribute="trailing" id="Fgu-aV-qaF"/>
-                            <constraint firstItem="Uup-7m-kmS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R1U-TW-fqt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uup-7m-kmS" secondAttribute="bottom" id="a1p-6F-puh"/>
+                            <constraint firstItem="Uup-7m-kmS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Kc-Dq-tlO"/>
+                            <constraint firstItem="Uup-7m-kmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eQr-VA-cgj"/>
+                            <constraint firstAttribute="bottom" secondItem="Uup-7m-kmS" secondAttribute="bottom" id="gRn-t2-hHD"/>
+                            <constraint firstItem="Uup-7m-kmS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oHU-WC-xMQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zodiaco" id="F5O-HK-nnB"/>
